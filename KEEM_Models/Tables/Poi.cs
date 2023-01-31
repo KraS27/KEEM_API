@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace KEEM_Models.Tables
 {
+    [Table("poi")]
     public class Poi
     {
         public int Id { get; set; }
