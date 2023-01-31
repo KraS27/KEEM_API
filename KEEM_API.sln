@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KEEM_API", "KEEM_API\KEEM_API.csproj", "{B82C92F9-F119-484D-BFB3-5B5FF35658FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KEEM_DAL", "KEEM_DAL", "{00D48EAD-5460-41DD-A040-1818A27FE007}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KEEM_DAL", "KEEM_DAL\KEEM_DAL.csproj", "{581C2ACB-542C-46A4-A70D-7A63B379B934}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KEEM_Models", "KEEM_Models", "{AB5EBBED-65B3-40A8-93D2-888028D4DF70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KEEM_Models", "KEEM_Models\KEEM_Models.csproj", "{6F4C4074-EECB-41F0-A6E8-974AD5D35945}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KEEM_Service", "KEEM_Service", "{91D56DD0-1690-4587-8348-A49097142B6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KEEM_Service", "KEEM_Service\KEEM_Service.csproj", "{769691FF-33FE-4EA5-9D9F-CDBB17BA57F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B82C92F9-F119-484D-BFB3-5B5FF35658FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82C92F9-F119-484D-BFB3-5B5FF35658FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B82C92F9-F119-484D-BFB3-5B5FF35658FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B82C92F9-F119-484D-BFB3-5B5FF35658FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{581C2ACB-542C-46A4-A70D-7A63B379B934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{581C2ACB-542C-46A4-A70D-7A63B379B934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{581C2ACB-542C-46A4-A70D-7A63B379B934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{581C2ACB-542C-46A4-A70D-7A63B379B934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F4C4074-EECB-41F0-A6E8-974AD5D35945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F4C4074-EECB-41F0-A6E8-974AD5D35945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F4C4074-EECB-41F0-A6E8-974AD5D35945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F4C4074-EECB-41F0-A6E8-974AD5D35945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{769691FF-33FE-4EA5-9D9F-CDBB17BA57F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{769691FF-33FE-4EA5-9D9F-CDBB17BA57F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{769691FF-33FE-4EA5-9D9F-CDBB17BA57F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{769691FF-33FE-4EA5-9D9F-CDBB17BA57F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{581C2ACB-542C-46A4-A70D-7A63B379B934} = {00D48EAD-5460-41DD-A040-1818A27FE007}
+		{6F4C4074-EECB-41F0-A6E8-974AD5D35945} = {AB5EBBED-65B3-40A8-93D2-888028D4DF70}
+		{769691FF-33FE-4EA5-9D9F-CDBB17BA57F1} = {91D56DD0-1690-4587-8348-A49097142B6E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F9C8B3A-8B8C-45EC-A191-50CEA63EA565}
+	EndGlobalSection
+EndGlobal
