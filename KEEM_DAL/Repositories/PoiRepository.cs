@@ -23,7 +23,7 @@ namespace KEEM_DAL.Repositories
         }
 
         public IQueryable<Poi> GetAll()
-        {
+        {            
             return _appDbContext.Pois;
         }
 

@@ -1,7 +1,6 @@
-﻿using KEEM_Models.Tables;
+﻿using KEEM_Models.ViewModels;
 using KEEM_Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Routing;
 
 namespace KEEM_API.Controllers
 {
@@ -17,18 +16,14 @@ namespace KEEM_API.Controllers
         }
 
         [HttpGet("GetPois")]
-        public async Task<IEnumerable<Poi>> GetPoisAsync()
-        {
+        public async Task<IActionResult> GetPoisAsync()
+        {                               
             var pois = await _poiService.GetAllPois();
-
-            if(pois.StatusCode == KEEM_Models.Enum.StatusCode.Ok)
-            {
-                return pois.Data;
-            }
-            else
-            {
-                return null;
-            }
+                        
+            if(pois.StatusCode == KEEM_Models.Enum.StatusCode.Ok)            
+                return new ObjectResult(pois.Data);            
+            else            
+                return NotFound();            
         }
     }
 }

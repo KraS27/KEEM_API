@@ -11,9 +11,7 @@ namespace KEEM_DAL
     public class AppDbContext : DbContext
     {
         public DbSet<Poi> Pois { get; set; } 
-        public DbSet<OwnerType> OwnerTypes { get; set; }
-
-
+        
         public AppDbContext(DbContextOptions options) : base(options) 
         {
 
@@ -36,6 +34,10 @@ namespace KEEM_DAL
                 entity.Property(p => p.NameObject)
                     .HasMaxLength(200)
                     .HasColumnName("Name_Object");
+
+                entity.HasOne(p => p.OwnerType)
+                    .WithMany(o => o.Pois)
+                    .HasForeignKey(p => p.OwnerTypeId);                    
             });
 
             builder.Entity<OwnerType>(entity =>
@@ -45,7 +47,7 @@ namespace KEEM_DAL
 
                 entity.ToTable("owner_types");
 
-                entity.Property(o => o.Type).HasColumnName("type");
+                entity.Property(o => o.Type).HasColumnName("type");                               
             });
         }
     }
