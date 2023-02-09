@@ -21,6 +21,8 @@ namespace KEEM_API
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 25))));
 
+            builder.Services.AddCors();
+
             builder.Services.AddControllers();
             
             builder.Services.AddEndpointsApiExplorer();
@@ -32,6 +34,8 @@ namespace KEEM_API
 
             var app = builder.Build();
 
+            app.UseCors(b => b.AllowAnyOrigin());
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -40,8 +44,7 @@ namespace KEEM_API
 
             app.UseHttpsRedirection();
 
-            app.UseAuthorization();
-
+            app.UseAuthorization();           
 
             app.MapControllers();
 

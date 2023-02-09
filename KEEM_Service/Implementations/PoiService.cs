@@ -22,30 +22,23 @@ namespace KEEM_Service.Implementations
         {
             try
             {
-                var pois = await _poiRepository.GetAll().Include(p => p.OwnerType).ToListAsync();
-
-                var poisVM = new List<PoiVM>();
-
-                foreach (var poi in pois)
+                var pois = await _poiRepository.GetAll().Include(p => p.OwnerType).Select(poi => new PoiVM
                 {
-                    poisVM.Add(new PoiVM
-                    {
-                        Id = poi.Id,
-                        IdOfUser = poi.IdOfUser,
-                        Type = poi.Type,
-                        OwnerType = poi.OwnerType.Type,                        
-                        CoordLat= poi.CoordLat,
-                        CoordLng= poi.CoordLng,
-                        Description= poi.Description,
-                        NameObject = poi.NameObject
-                    });
-                }
-
+                    Id = poi.Id,
+                    IdOfUser = poi.IdOfUser,
+                    Type = poi.Type,
+                    OwnerType = poi.OwnerType.Type,
+                    CoordLat = poi.CoordLat,
+                    CoordLng = poi.CoordLng,
+                    Description = poi.Description,
+                    NameObject = poi.NameObject
+                }).ToListAsync();
+               
                 if (pois.Count != 0)
                 {
                     return new BaseResponse<IEnumerable<PoiVM>>()
                     {
-                        Data = poisVM,
+                        Data = pois,
                         StatusCode = KEEM_Models.Enum.StatusCode.Ok
                     };
                 }
